@@ -7,22 +7,9 @@ def start_check():
     now_h = datetime.datetime.now()
     now_wday = datetime.datetime.now().weekday()
 
-    if now_wday == 0: #요일 이름 저장
-        stored_day = "월"
-    elif now_wday == 1:
-        stored_day = "화"
-    elif now_wday == 2:
-        stored_day = "수"
-    elif now_wday == 3:
-        stored_day = "목"
-    elif now_wday == 4:
-        stored_day = "금"
-    elif now_wday == 5:
-        stored_day = "토"
-    elif now_wday == 6:
-        stored_day = "일"
-    else:
-        stored_day = "X"
+    dayList = ['월','화','수','목','금','토','일']
+    stored_day = dayList[now_wday]
+
 
     if now_wday == 0 or now_wday == 2 or now_wday == 4: #월,수,금 요일만 접속
         print(now_h)
